@@ -1,4 +1,4 @@
-def nrz(bits):
+def nrz_i(bits):
     NRZI = []
     current_voltage = -1
 

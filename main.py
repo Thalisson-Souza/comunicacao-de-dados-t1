@@ -81,7 +81,7 @@ def mostrar_menu_codigos():
     print("Escolha o codigo de linha")
     print("1 - Manchester")
     print("2 - Manchester Diferencial")
-    print("3 - NRZ")
+    print("3 - NRZ-I")
     print("4 - NRZ-L")
     print("5 - AMI")
     print("6 - Pseudoternário")

@@ -1,5 +1,5 @@
 from codigos.manchester import manchester, manchester_diferencial
-from codigos.nrz import nrz, nrz_l
+from codigos.nrz import nrz_i, nrz_l
 from codigos.ami import ami
 from codigos.pseudoternario import pseudoternario
 from codigos._2b1q import codigo_2b1q
@@ -17,8 +17,8 @@ def gerar_sinal(bits, codigo):
         titulo = "Codificacao Manchester Diferencial"
 
     elif codigo == "NRZ":
-        sinal = nrz(bits)
-        titulo = "Codificacao NRZ"
+        sinal = nrz_i(bits)
+        titulo = "Codificacao NRZ-I"
 
     elif codigo == "NRZ-L":
         sinal = nrz_l(bits)
