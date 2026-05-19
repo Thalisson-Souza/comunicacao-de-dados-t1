@@ -30,16 +30,25 @@ Depois disso, é possível selecionar uma das codificações implementadas para 
 
 ### 1. Com ambiente virtual (recomendado):
 
+- Windows
 ```bash
 python -m venv venv
 
-# no linux/macOS
-source venv/bin/activate
-
-# no windows
 venv\Scripts\activate
 
 pip install -r requirements.txt
+
+python main.py
+```
+
+- Linux/MacOS
+```bash
+python3 -m venv venv
+
+source venv/bin/activate
+
+pip install -r requirements.txt
+
 python main.py
 ```
 
