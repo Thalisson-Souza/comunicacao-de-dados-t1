@@ -49,7 +49,7 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 
-python main.py
+python3 main.py
 ```
 
 ### 2. Sem ambiente virtual (instalação global)
