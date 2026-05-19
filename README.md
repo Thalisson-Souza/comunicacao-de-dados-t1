@@ -32,13 +32,13 @@ Depois disso, é possível selecionar uma das codificações implementadas para 
 
 - Windows
 ```bash
-python -m venv venv
+py -m venv venv
 
 venv\Scripts\activate
 
 pip install -r requirements.txt
 
-python main.py
+py main.py
 ```
 
 - Linux/MacOS
@@ -56,6 +56,6 @@ python3 main.py
 ```bash
 pip install -r requirements.txt
 
-python main.py
+py main.py
 ```
 
