@@ -3,10 +3,10 @@ def cmi(bits):
     nivel_atual = 1
 
     for bit in bits:
-      if bit == '0':
-        sinal.extend([-1, 1])  
-      else:
-        sinal.append(nivel_atual)
-        nivel_atual *= -1 
-    
+        if bit == "0":
+            sinal.extend([-1, 1])
+        else:
+            sinal.extend([nivel_atual, nivel_atual])
+            nivel_atual *= -1
+
     return sinal
