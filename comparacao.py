@@ -17,31 +17,31 @@ def exibir_metricas(codigo, sinal):
     transicoes, valor_medio = calcular_metricas(sinal)
 
     print()
-    print("Codigo:", codigo)
-    print("Transicoes:", transicoes)
-    print("Valor medio aproximado:", round(valor_medio, 2))
+    print("Code:", codigo)
+    print("Transitions:", transicoes)
+    print("Approximate average value:", round(valor_medio, 2))
 
 
 def executar_comparacao(bits, escolher_codigo):
     print()
-    print("Escolha o primeiro codigo")
+    print("Choose the first code")
     codigo_1 = escolher_codigo()
 
-    if codigo_1 is None or codigo_1 == "Comparacao":
+    if codigo_1 is None or codigo_1 == "Comparison":
         return
 
     print()
-    print("Escolha o segundo codigo")
+    print("Choose the second code")
     codigo_2 = escolher_codigo()
 
-    if codigo_2 is None or codigo_2 == "Comparacao":
+    if codigo_2 is None or codigo_2 == "Comparison":
         return
 
     sinal_1, titulo_1 = gerar_sinal(bits, codigo_1)
     sinal_2, titulo_2 = gerar_sinal(bits, codigo_2)
 
     print()
-    print("Sequencia comparada:", bits)
+    print("Compared sequence:", bits)
 
     metricas_1 = calcular_metricas(sinal_1)
     metricas_2 = calcular_metricas(sinal_2)

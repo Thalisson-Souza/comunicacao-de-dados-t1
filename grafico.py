@@ -31,7 +31,7 @@ def desenhar_sinal(ax, bits, sinal, titulo):
         ax.text(i + 0.5, posicao_bits, bit, ha="center", fontsize=12)
 
     ax.set_title(titulo)
-    ax.set_ylabel("Nivel")
+    ax.set_ylabel("Level")
     ax.set_ylim(menor_nivel - 1, maior_nivel + 1)
     ax.set_xlim(0, len(bits))
     ax.set_yticks(sorted(set(sinal_plot + [-1, 0, 1])))
@@ -43,7 +43,7 @@ def exibir_grafico(bits, sinal, titulo):
 
     desenhar_sinal(ax, bits, sinal, titulo)
 
-    ax.set_xlabel("Intervalos de bit")
+    ax.set_xlabel("Bit intervals")
 
     plt.tight_layout()
     plt.show()
@@ -55,13 +55,13 @@ def exibir_grafico_comparacao(bits, sinal_1, titulo_1, sinal_2, titulo_2, metric
     desenhar_sinal(axs[0], bits, sinal_1, titulo_1)
     desenhar_sinal(axs[1], bits, sinal_2, titulo_2)
 
-    axs[1].set_xlabel("Intervalos de bit")
+    axs[1].set_xlabel("Bit intervals")
 
     axs[2].axis("off")
 
     texto_metricas = (
-        f"{titulo_1}: transicoes = {metricas_1[0]}, media = {round(metricas_1[1], 2)}\n"
-        f"{titulo_2}: transicoes = {metricas_2[0]}, media = {round(metricas_2[1], 2)}"
+        f"{titulo_1}: transitions = {metricas_1[0]}, average = {round(metricas_1[1], 2)}\n"
+        f"{titulo_2}: transitions = {metricas_2[0]}, average = {round(metricas_2[1], 2)}"
     )
 
     axs[2].text(0.01, 0.7, texto_metricas, fontsize=12, va="top")

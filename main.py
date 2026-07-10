@@ -27,14 +27,14 @@ def gerar_sequencia_aleatoria(tamanho=16):
 
 def mostrar_menu_sequencias():
     print()
-    print("Escolha a sequencia de bits")
-    print("1 - 10101010   -> Alternancia constante")
-    print("2 - 00000000   -> Longa sequencia de zeros")
-    print("3 - 111111111  -> Longa sequencia de uns")
-    print("4 - 11001100   -> Padrao misto")
-    print("5 - Aleatoria  -> Aleatório com 16 bits")
-    print("6 - Digitar manualmente")
-    print("0 - Sair")
+    print("Choose a bit sequence")
+    print("1 - 10101010   -> Constant alternation")
+    print("2 - 00000000   -> Long sequence of zeros")
+    print("3 - 111111111  -> Long sequence of ones")
+    print("4 - 11001100   -> Mixed pattern")
+    print("5 - Random     -> Random 16-bit sequence")
+    print("6 - Enter manually")
+    print("0 - Exit")
     print()
 
 
@@ -42,7 +42,7 @@ def escolher_sequencia():
     while True:
         mostrar_menu_sequencias()
 
-        opcao = input("Escolha uma opcao: ")
+        opcao = input("Choose an option: ")
 
         if opcao == "0":
             return None
@@ -61,35 +61,35 @@ def escolher_sequencia():
 
         if opcao == "5":
             bits = gerar_sequencia_aleatoria(16)
-            print("Sequencia aleatoria gerada:", bits)
+            print("Random sequence generated:", bits)
             return bits
 
         if opcao == "6":
-            bits = input("Informe a sequencia de bits: ")
+            bits = input("Enter the bit sequence: ")
 
             if validar_bits(bits):
                 return bits
 
-            print("Sequencia invalida. Use apenas 0 e 1.")
+            print("Invalid sequence. Use only 0 and 1.")
             continue
 
-        print("Opcao invalida.")
+        print("Invalid option.")
 
 
 def mostrar_menu_codigos():
     print()
-    print("Escolha o codigo de linha")
+    print("Choose a line code")
     print("1 - Manchester")
-    print("2 - Manchester Diferencial")
+    print("2 - Differential Manchester")
     print("3 - NRZ-I")
     print("4 - NRZ-L")
     print("5 - AMI")
-    print("6 - Pseudoternário")
+    print("6 - Pseudoternary")
     print("7 - CMI")
     print("8 - MLT-3")
     print("9 - 2B1Q")
-    print("10 - Modo comparação")
-    print("0 - Voltar")
+    print("10 - Comparison mode")
+    print("0 - Back")
     print()
 
 
@@ -97,7 +97,7 @@ def escolher_codigo():
     while True:
         mostrar_menu_codigos()
 
-        opcao = input("Escolha uma opcao: ")
+        opcao = input("Choose an option: ")
 
         if opcao == "0":
             return None
@@ -106,7 +106,7 @@ def escolher_codigo():
             return "Manchester"
 
         if opcao == "2":
-            return "Manchester Diferencial"
+            return "Differential Manchester"
         
         if opcao == "3":
             return "NRZ"
@@ -118,7 +118,7 @@ def escolher_codigo():
             return "AMI"
     
         if opcao == "6":
-            return "Pseudoternario"
+            return "Pseudoternary"
 
         if opcao == "7":
             return "CMI"
@@ -130,16 +130,16 @@ def escolher_codigo():
             return "2B1Q"
 
         if opcao == "10":
-            return "Comparacao"
+            return "Comparison"
 
-        print("Opcao invalida.")
+        print("Invalid option.")
 
 def executar():
     while True:
         bits = escolher_sequencia()
 
         if bits is None:
-            print("Encerrando...")
+            print("Exiting...")
             break
 
         codigo = escolher_codigo()
@@ -147,15 +147,15 @@ def executar():
         if codigo is None:
             continue
 
-        if codigo == "Comparacao":
+        if codigo == "Comparison":
             executar_comparacao(bits, escolher_codigo)
             continue
 
         sinal, titulo = gerar_sinal(bits, codigo)
 
         print()
-        print("Sequencia escolhida:", bits)
-        print("Codigo escolhido:", codigo)
+        print("Selected sequence:", bits)
+        print("Selected code:", codigo)
 
         exibir_grafico(bits, sinal, titulo)
 

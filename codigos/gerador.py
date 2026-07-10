@@ -10,38 +10,38 @@ from codigos.mlt3 import mlt3
 def gerar_sinal(bits, codigo):
     if codigo == "Manchester":
         sinal = manchester(bits)
-        titulo = "Codificacao Manchester"
+        titulo = "Manchester Encoding"
 
-    elif codigo == "Manchester Diferencial":
+    elif codigo == "Differential Manchester":
         sinal = manchester_diferencial(bits)
-        titulo = "Codificacao Manchester Diferencial"
+        titulo = "Differential Manchester Encoding"
 
     elif codigo == "NRZ":
         sinal = nrz_i(bits)
-        titulo = "Codificacao NRZ-I"
+        titulo = "NRZ-I Encoding"
 
     elif codigo == "NRZ-L":
         sinal = nrz_l(bits)
-        titulo = "Codificacao NRZ-L"
+        titulo = "NRZ-L Encoding"
 
     elif codigo == "AMI":
         sinal = ami(bits)
-        titulo = "Codificacao AMI"
+        titulo = "AMI Encoding"
 
-    elif codigo == "Pseudoternario":
+    elif codigo == "Pseudoternary":
         sinal = pseudoternario(bits)
-        titulo = "Codificacao Pseudoternario"
+        titulo = "Pseudoternary Encoding"
 
     elif codigo == "CMI":
         sinal = cmi(bits)
-        titulo = "Codificacao CMI"
+        titulo = "CMI Encoding"
 
     elif codigo == "MLT-3":
         sinal = mlt3(bits)
-        titulo = "Codificacao MLT-3"
+        titulo = "MLT-3 Encoding"
 
     elif codigo == "2B1Q":
         sinal = codigo_2b1q(bits)
-        titulo = "Codificacao 2B1Q"
+        titulo = "2B1Q Encoding"
 
     return sinal, titulo
