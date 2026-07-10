@@ -1,8 +1,8 @@
-# Codificação de Linha - Simulador
+# Line Coding Simulator
 
-Implementação de uma ferramenta para visualizar códigos de linha e compará-los em redes de comunicação de dados.
+Implementation of a tool for visualizing and comparing line codes in data communication networks.
 
-## Códificações Implementadas
+## Implemented Line Codes
 - Manchester
 - Manchester Diferencial
 - NRZ-I
@@ -13,22 +13,22 @@ Implementação de uma ferramenta para visualizar códigos de linha e compará-l
 - MLT-3
 - 2B1Q
 
-## Funcionamento
+## How It Works
 
-Ao executar o programa, é exibido um menu interativo no terminal. Nele, o usuário pode escolher uma sequência de bits pronta, gerar uma sequência aleatória de 16 bits ou digitar manualmente os bits.
+When the program is run, an interactive menu is displayed in the terminal. The user can choose a predefined bit sequence, generate a random 16-bit sequence, or manually enter the bits.
 
-Depois disso, é possível selecionar uma das codificações implementadas para visualizar o sinal correspondente em um gráfico. Também há um modo de comparação, que permite escolher dois códigos de linha e comparar seus sinais, mostrando informações como número de transições e valor médio aproximado.
+After that, one of the implemented line codes can be selected to visualize its corresponding signal in a graph. There is also a comparison mode that allows the user to choose two line codes and compare their signals, displaying information such as the number of transitions and the approximate average value.
 
-### Possibilidades
+### Features
 
-- Visualizar 2 diferentes códigos de linha a partir da mesma sequência de bits.
-- Testar sequências prontas, aleatórias ou digitadas manualmente.
-- Comparar dois métodos de codificação.
-- Observar graficamente as mudanças de nível do sinal ao longo dos intervalos de bit.
+- Visualize two different line codes using the same bit sequence.
+- Test predefined, random, or manually entered sequences.
+- Compare two encoding methods.
+- Graphically observe changes in signal level over bit intervals.
 
-## Como executar
+## How to Run
 
-### 1. Com ambiente virtual (recomendado):
+### 1. Using a virtual environment (recommended)
 
 - Windows
 ```bash
@@ -52,10 +52,9 @@ pip install -r requirements.txt
 python3 main.py
 ```
 
-### 2. Sem ambiente virtual (instalação global)
+### 2. Without a virtual environment (global installation)
 ```bash
 pip install -r requirements.txt
 
 py main.py
 ```
-
